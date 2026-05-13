@@ -1,3 +1,9 @@
+/*
+Auteurs: Vincent Bélisle BELV1805,
+Elliot Gaulin GAUE1909
+*/
+
+
 // BLE client -> send "GET" on notify
 #include <Arduino.h>
 #include <BLEDevice.h>
@@ -191,6 +197,7 @@ void loop()
       if (c == '\n')
         break;
       csvData += c;
+      Serial.print(c); // Echo received data to Serial
     }
     if (!csvData.empty())
     {
